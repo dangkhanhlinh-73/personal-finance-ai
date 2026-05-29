@@ -1,0 +1,578 @@
+.investments-layout {
+  min-height: 100vh;
+  display: flex;
+  background: #f8fafc;
+  color: #020817;
+}
+
+.investments-main {
+  flex: 1;
+  padding: 42px;
+  overflow-y: auto;
+}
+
+.investments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.investments-header h1 {
+  font-size: 36px;
+  margin: 0;
+  font-weight: 900;
+}
+
+.investments-header p {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 18px;
+}
+
+.add-invest-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 46px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.add-invest-btn:hover {
+  background: #1d4ed8;
+}
+
+.invest-error {
+  background: #fee2e2;
+  color: #dc2626;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+/* Stats */
+.invest-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.invest-stat-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 28px;
+}
+
+.invest-stat-card p {
+  margin: 0;
+  font-size: 16px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.invest-stat-card h2 {
+  margin: 16px 0 8px;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.invest-stat-card span {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.invest-stat-card.blue {
+  background: #2563eb;
+  border: none;
+  color: white;
+}
+
+.invest-stat-card.blue p,
+.invest-stat-card.blue h2,
+.invest-stat-card.blue span {
+  color: white;
+}
+
+.invest-stat-card.green h2 {
+  color: #0f766e;
+}
+
+.invest-stat-card.orange h2 {
+  color: #d97706;
+}
+
+.invest-stat-card.teal h2 {
+  color: #0f766e;
+}
+
+/* Section */
+.invest-section {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 28px;
+  margin-bottom: 28px;
+}
+
+.invest-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.invest-section h2 {
+  margin: 0 0 20px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.invest-section-header h2 {
+  margin-bottom: 0;
+}
+
+.add-source-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 16px;
+  border: 1px solid #2563eb;
+  border-radius: 10px;
+  background: white;
+  color: #2563eb;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-source-btn:hover {
+  background: #eaf2ff;
+}
+
+.invest-empty {
+  padding: 32px;
+  text-align: center;
+  color: #94a3b8;
+  background: #f8fafc;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+/* Source grid */
+.source-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.source-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 20px;
+  background: #f8fafc;
+}
+
+.source-card-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.source-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #eaf2ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.source-info {
+  flex: 1;
+}
+
+.source-info h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.source-info p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.source-delete-btn {
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.source-delete-btn:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.source-balances {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.source-balance-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.source-balance-row span {
+  color: #64748b;
+}
+
+.source-balance-row b {
+  font-weight: 700;
+  color: #334155;
+}
+
+.source-balance-row.current b {
+  color: #2563eb;
+  font-size: 16px;
+}
+
+/* Edit button on source card */
+.source-edit-btn {
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.source-edit-btn:hover { background: #eaf2ff; color: #2563eb; }
+
+/* Interest rate row */
+.source-balance-row.interest-row {
+  border-top: 1px dashed #e5e7eb;
+  padding-top: 8px;
+  margin-top: 4px;
+}
+.rate-badge {
+  background: #eaf2ff;
+  color: #2563eb;
+  padding: 1px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Profit / Loss row */
+.source-balance-row.profit-row {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 8px;
+  margin-top: 4px;
+}
+.source-balance-row.profit-row.profit b { color: #0f766e; }
+.source-balance-row.profit-row.loss b   { color: #dc2626; }
+
+/* Small modal */
+.invest-modal-sm { width: 460px; }
+
+/* Hint text under field */
+.invest-field-hint {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* Investment list */
+.invest-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.invest-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.invest-dir-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dir-in {
+  background: #ccfbf1;
+  color: #0f766e;
+}
+
+.dir-out {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.invest-item-info {
+  flex: 1;
+}
+
+.invest-item-info h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dir-badge {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.badge-invest {
+  background: #ccfbf1;
+  color: #0f766e;
+}
+
+.badge-withdraw {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.invest-item-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.invest-item-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.invest-item-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.invest-item-right strong {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.amount-in {
+  color: #0f766e;
+}
+
+.amount-out {
+  color: #c2410c;
+}
+
+.invest-delete-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #94a3b8;
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.invest-delete-btn:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* Modal */
+.invest-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 24px;
+}
+
+.invest-modal {
+  width: 640px;
+  max-width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.24);
+}
+
+.invest-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.invest-modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.invest-modal-header button {
+  border: none;
+  background: #f1f5f9;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.invest-modal label {
+  display: block;
+  margin: 14px 0 7px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.invest-modal input,
+.invest-modal select,
+.invest-modal textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #f1f3f7;
+  border-radius: 10px;
+  padding: 0 14px;
+  height: 46px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.invest-modal textarea {
+  height: 80px;
+  padding-top: 12px;
+  resize: vertical;
+}
+
+.invest-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.invest-modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.invest-save-btn {
+  flex: 1;
+  height: 46px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.invest-save-btn:hover {
+  background: #1d4ed8;
+}
+
+.invest-cancel-btn {
+  height: 46px;
+  padding: 0 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: white;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .invest-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .invest-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* External filter row above investment history DataTable */
+.invest-external-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.invest-external-filters select {
+  padding: 8px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #ffffff;
+  cursor: pointer;
+  color: #374151;
+}

@@ -1,0 +1,54 @@
+.money-input-wrap {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.15s;
+}
+
+.money-input-wrap:focus-within {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+  border-color: #2563eb;
+}
+
+.money-input-field {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  padding: 10px 14px;
+  font-size: 15px;
+  background: transparent;
+  color: #020817;
+}
+
+.money-input-field:disabled {
+  background: #f1f5f9;
+  color: #94a3b8;
+}
+
+.x1000-btn {
+  flex-shrink: 0;
+  padding: 0 14px;
+  background: #f1f5f9;
+  border: none;
+  border-left: 1px solid #d1d5db;
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.x1000-btn:hover:not(:disabled) {
+  background: #dbeafe;
+}
+
+.x1000-btn:disabled {
+  color: #94a3b8;
+  cursor: not-allowed;
+}

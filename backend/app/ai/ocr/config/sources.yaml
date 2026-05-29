@@ -1,0 +1,64 @@
+# Source detection + extractor routing.
+#
+# Each entry: <canonical_name>:
+#     keywords: list of substrings to match (case-insensitive) against the
+#               OCR text of the whole screen. The source with the highest
+#               number of keyword hits wins.
+#     extractor: module name under src/extractors/ that parses this format.
+#
+# When no source has any keyword hit, the pipeline falls back to the
+# `general` extractor (src/extractors/general.py).
+
+sources:
+  VCB:
+    keywords:
+      - "vcb"
+      - "vietcombank"
+      - "Số dư TKVCB"
+      - "Số dư TK VCB"
+      - "Thông tin Vietcombank"
+    extractor: vcb_notification
+
+  MoMo:
+    keywords:
+      - "momo"
+      - "Số dư Túi"
+      - "Túi Thần Tài"
+      - "Lịch sử GD"
+    extractor: momo
+
+  HSBC:
+    keywords:
+      - "The tin dung"
+      - "Thẻ tín dụng"
+      - "han muc kha dung"
+      - "Hạn mức khả dụng"
+      - "Du no hien tai"
+      - "Dư nợ hiện tại"
+    extractor: credit_card
+
+  UOB:
+    keywords:
+      - "UOB ONE MASTERCARD"
+      - "Xem Sao kê điện tử"
+      - "Chuyển đổi trả góp"
+    extractor: uob
+    
+  Vietin:
+    keywords:
+      - "Số dư hiện"
+      - "iPay"
+      - "Nội dung:"
+      - "Giao dịch"
+    extractor: vietin
+
+  Invoice:
+    keywords:
+      - "HÓA ĐƠN BÁN HÀNG"
+      - "Hoá đơn điện tử"
+      - "PHIẾU THANH TOÁN"
+      - "Phải thanh toán"
+      - "Số HĐ"
+      - "Số CT"
+      - "Mã số thuế"
+    extractor: invoice

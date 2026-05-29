@@ -1,0 +1,456 @@
+.accounts-layout {
+  min-height: 100vh;
+  display: flex;
+  background: #f8fafc;
+  color: #020817;
+}
+
+.accounts-main {
+  flex: 1;
+  padding: 42px;
+  overflow-y: auto;
+}
+
+.accounts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+.accounts-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+}
+.accounts-header p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 15px;
+}
+
+.add-account-btn {
+  height: 46px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.account-total-card {
+  margin-top: 28px;
+  background: #2563eb;
+  color: white;
+  padding: 34px 30px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-total-card p {
+  margin: 0 0 18px;
+  font-size: 20px;
+}
+
+.account-total-card h2 {
+  font-size: 42px;
+  margin: 0;
+}
+
+.account-total-card span {
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.account-total-icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.account-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.account-card-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.account-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.account-icon.bank {
+  background: #2563eb;
+}
+
+.account-icon.ewallet {
+  background: #db2777;
+}
+
+.account-icon.cash {
+  background: #16a34a;
+}
+
+.account-name {
+  flex: 1;
+}
+
+.account-name h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.account-name p {
+  margin: 6px 0 0;
+  color: #64748b;
+}
+
+.more-icon {
+  color: #111827;
+}
+
+.account-money {
+  margin-top: 24px;
+}
+
+.account-money p {
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.account-money h2 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.account-card-bottom {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 18px;
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #64748b;
+}
+
+.type-badge {
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.type-badge.bank {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.type-badge.ewallet {
+  background: #fce7f3;
+  color: #db2777;
+}
+
+.type-badge.cash {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.empty-box {
+  background: white;
+  border: 1px dashed #cbd5e1;
+  border-radius: 16px;
+  padding: 28px;
+  color: #64748b;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
+.add-modal {
+  width: 610px;
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.3);
+}
+
+.modal-title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.modal-title-row h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.modal-title-row p {
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 17px;
+}
+
+.close-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #52525b;
+}
+
+.add-modal label {
+  display: block;
+  margin: 18px 0 8px;
+  font-weight: 700;
+}
+
+.add-modal input,
+.add-modal select {
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: 10px;
+  background: #f1f1f4;
+  padding: 0 14px;
+  font-size: 16px;
+  outline: none;
+}
+
+.modal-actions {
+  display: grid;
+  grid-template-columns: 1fr 74px;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.submit-btn {
+  height: 46px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  height: 46px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.account-error {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  margin: 14px 0;
+}
+/* --- CSS CHO HOẠT ĐỘNG GẦN ĐÂY --- */
+.recent-activity {
+  margin-top: 32px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 26px 30px;
+}
+
+.recent-activity h3 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  color: #0f172a;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.empty-activity {
+  color: #64748b;
+  text-align: center;
+  padding: 20px 0;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.activity-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activity-icon.income {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.activity-icon.expense {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.activity-info {
+  flex: 1;
+}
+
+.activity-info h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #0f172a;
+}
+
+.activity-info p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.activity-amount {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.activity-amount.income {
+  color: #16a34a;
+}
+
+.activity-amount.expense {
+  color: #ef4444;
+}
+/* --- CSS CHO MENU SỬA/XÓA TÀI KHOẢN --- */
+.action-menu-container {
+  position: relative;
+}
+
+.more-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #64748b;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.more-btn:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.action-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  min-width: 160px;
+  z-index: 50;
+}
+
+.action-dropdown button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-dropdown button:hover {
+  background: #f1f5f9;
+}
+
+.action-dropdown button.delete-text {
+  color: #ef4444;
+}
+
+.action-dropdown button.delete-text:hover {
+  background: #fef2f2;
+}
+
+/* Compact edit/delete buttons reused from Categories pattern */
+.cat-edit-btn,
+.cat-delete-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+  background: #f8fafc;
+  cursor: pointer;
+  color: #64748b;
+  transition: background 0.15s, color 0.15s;
+}
+
+.cat-edit-btn:hover { background: #f1f5f9; color: #2563eb; }
+.cat-delete-btn:hover { background: #fef2f2; color: #dc2626; border-color: #fca5a5; }
